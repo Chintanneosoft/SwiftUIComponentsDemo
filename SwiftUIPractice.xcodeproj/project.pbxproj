@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9284D3B62AE25CAE00D5173D /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284D3B52AE25CAE00D5173D /* FormView.swift */; };
 		9284D3B82AE26B3500D5173D /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284D3B72AE26B3500D5173D /* TextView.swift */; };
+		928CB39C2AE65A820058D280 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928CB39B2AE65A820058D280 /* OverlayView.swift */; };
+		928CB39E2AE674230058D280 /* CardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928CB39D2AE674230058D280 /* CardDemoView.swift */; };
 		929DBE6F2AE14D76001CC24A /* SwiftUIPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929DBE6E2AE14D76001CC24A /* SwiftUIPracticeApp.swift */; };
 		929DBE712AE14D76001CC24A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929DBE702AE14D76001CC24A /* ContentView.swift */; };
 		929DBE732AE14D7B001CC24A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929DBE722AE14D7B001CC24A /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		9284D3B52AE25CAE00D5173D /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		9284D3B72AE26B3500D5173D /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		928CB39B2AE65A820058D280 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		928CB39D2AE674230058D280 /* CardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDemoView.swift; sourceTree = "<group>"; };
 		929DBE6B2AE14D76001CC24A /* SwiftUIPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929DBE6E2AE14D76001CC24A /* SwiftUIPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPracticeApp.swift; sourceTree = "<group>"; };
 		929DBE702AE14D76001CC24A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 			children = (
 				929DBE6E2AE14D76001CC24A /* SwiftUIPracticeApp.swift */,
 				929DBE702AE14D76001CC24A /* ContentView.swift */,
+				928CB39B2AE65A820058D280 /* OverlayView.swift */,
+				928CB39D2AE674230058D280 /* CardDemoView.swift */,
 				9284D3B52AE25CAE00D5173D /* FormView.swift */,
 				9284D3B72AE26B3500D5173D /* TextView.swift */,
 				929DBE722AE14D7B001CC24A /* Assets.xcassets */,
@@ -145,8 +151,10 @@
 			files = (
 				9284D3B62AE25CAE00D5173D /* FormView.swift in Sources */,
 				9284D3B82AE26B3500D5173D /* TextView.swift in Sources */,
+				928CB39E2AE674230058D280 /* CardDemoView.swift in Sources */,
 				929DBE712AE14D76001CC24A /* ContentView.swift in Sources */,
 				929DBE6F2AE14D76001CC24A /* SwiftUIPracticeApp.swift in Sources */,
+				928CB39C2AE65A820058D280 /* OverlayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -56,11 +56,25 @@ struct ContentView: View {
                         ) {
                         Text("Go To Form").foregroundColor(.black)
                         }.navigationBarTitle(Text("All Components"))
+                
                 NavigationLink(destination:
                         TextView()
                         .navigationBarTitle(Text("TextView"))
                     ) {
                     Text("Go To TextView").foregroundColor(.black)
+                    }
+                
+                NavigationLink(destination:
+                        OverlayView()
+                        .navigationBarTitle(Text("Overlay View"))
+                    ) {
+                    Text("Go To Overlay View").foregroundColor(.black)
+                    }
+                NavigationLink(destination:
+                        CardDemoView()
+                        .navigationBarTitle(Text("Card View"))
+                    ) {
+                    Text("Go To Card View").foregroundColor(.black)
                     }
                 List {
                     Picker("Flavor", selection: $selectedFlavor) {
@@ -99,7 +113,7 @@ struct ContentView: View {
                             .offset(x: 0, y: 30)
                         Text("Hello")
                             .padding(10)
-                            .background(Color.red)
+                            .background(Color.blue)
                             .opacity(0.8)
                         
                     }.frame(maxWidth:.infinity)
@@ -144,17 +158,10 @@ struct ContentView: View {
                         Alert(title: Text("Alert"), message: Text("Alert Message"), dismissButton: .default(Text("OK")))
                     }).frame(maxWidth: .infinity)
                     
-                    Button("Action Sheet"){
-                        self.isSheet = true
-                    }
-                    Button("Action Sheet", action: {
-                        self.is
-                    }).actionSheet(isPresented: $isSheet, content: {
-                        self.actionSheet
-                    })
+                    
                 }
             }
-        }
+        }.ignoresSafeArea()
     }
     
 }
