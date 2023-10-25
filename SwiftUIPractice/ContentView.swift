@@ -52,10 +52,16 @@ struct ContentView: View {
                     Text("Go To OtherViews").foregroundColor(.black)
                     }
                 NavigationLink(destination:
-                        OtherViews()
+                        Animations()
                         .navigationBarTitle(Text("Animation"))
                     ) {
                     Text("Go To Animation").foregroundColor(.black)
+                    }
+                NavigationLink(destination:
+                        BarChartView()
+                        .navigationBarTitle(Text("BarChart"))
+                    ) {
+                    Text("Go To BarChart").foregroundColor(.black)
                     }
                
             }

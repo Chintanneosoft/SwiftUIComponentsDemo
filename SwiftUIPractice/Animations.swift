@@ -35,13 +35,15 @@ struct Animations: View {
                     self.isAnimating.toggle()
                 }
             }
+            .animation(.easeInOut(duration: 1.0))
             
             ZStack {
                 Circle()
                     .fill(Color.blue)
                     .opacity(0.6)
                     .frame(width: 200, height: 200)
-                    .rotation3DEffect(Angle(degrees: isAnimating ? 0 : 360), axis: (x:0,y:60,z:0))
+                    .rotation3DEffect(Angle(degrees: isAnimating ? 0 : 360), axis: (x:50,y:50,z:50))
+                    .animation(.easeOut(duration: 1.0))
                 
                 Path { path in
                     path.move(to: CGPoint(x: 100, y: 0))
@@ -58,6 +60,8 @@ struct Animations: View {
                         self.isAnimating.toggle()
                     }
                 }
+                .animation(.easeOut(duration: 1.0))
+                
                 Path { path in
                     path.move(to: CGPoint(x: 100, y: 0))
                     path.addQuadCurve(to: CGPoint(x: 0, y: 100), control: CGPoint(x: 0, y: 0))
@@ -73,6 +77,8 @@ struct Animations: View {
                         self.isAnimating.toggle()
                     }
                 }
+                .animation(.easeOut(duration: 1.0))
+                
             }
             Circle()
                 .stroke(Color.yellow, lineWidth: 5)
