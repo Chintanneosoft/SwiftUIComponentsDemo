@@ -22,6 +22,7 @@ struct Animations: View {
                         self.isAnimating.toggle()
                     }
                 }
+            
             Path { path in
                 path.move(to: CGPoint(x: 20, y: 20))
                 path.addLine(to: CGPoint(x: 100, y: 20))
@@ -36,6 +37,19 @@ struct Animations: View {
                 }
             }
             .animation(.easeInOut(duration: 1.0))
+            
+            if isAnimating{
+                Circle()
+                    .fill(.linearGradient(Gradient(colors: [.red, .green, .blue]), startPoint: UnitPoint(x: 0, y: 0.4), endPoint: UnitPoint(x: 1, y: 0.8)
+                    ))
+                    .frame(width: 100, height: 100)
+                    .animation(.easeInOut(duration: 1))
+                    .onTapGesture {
+                        withAnimation {
+                            self.isAnimating.toggle()
+                        }
+                    }.transition(.opacity)
+            }
             
             ZStack {
                 Circle()
@@ -80,16 +94,18 @@ struct Animations: View {
                 .animation(.easeOut(duration: 1.0))
                 
             }
+            
             Circle()
                 .stroke(Color.yellow, lineWidth: 5)
-                        .frame(width: 100, height: 100)
-                        .offset(CGSize(width: 0, height: isAnimating ? 0 : -400))
-                        .animation(.easeInOut(duration: 1))
-                        .onTapGesture {
-                            withAnimation {
-                                self.isAnimating.toggle()
-                            }
-                        }
+                .frame(width: 100, height: 100)
+                .offset(CGSize(width: 0, height: isAnimating ? 0 : -400))
+                .animation(.easeInOut(duration: 1))
+                .onTapGesture {
+                    withAnimation {
+                        self.isAnimating.toggle()
+                    }
+                }
+            
         }
     }
 }

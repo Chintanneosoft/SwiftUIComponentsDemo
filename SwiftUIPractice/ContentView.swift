@@ -12,58 +12,27 @@ enum Flavor: String, CaseIterable, Identifiable {
     var id: Self { self }
 }
 
+
+
 struct ContentView: View {
     
-    
+    var views: [(AnyView, String)] = [
+        (AnyView(TextView()), "TextView"),
+        (AnyView(OverlayView()), "OverlayView"),
+        (AnyView(CardDemoView()), "CardDemoView"),
+        (AnyView(OtherViews()), "OtherViews"),
+        (AnyView(Animations()), "Animations"),
+        (AnyView(BarChartView()), "BarChartView"),
+        (AnyView(PieChartView()), "PieChartView"),
+        (AnyView(UIKitInSwiftUI()), "UIKitInSwiftUI")
+    ]
     
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination:
-                            FormView()
-                            .navigationBarTitle(Text("FormView"))
-                        ) {
-                        Text("Go To Form").foregroundColor(.black)
-                        }.navigationBarTitle(Text("All Components"))
-                
-                NavigationLink(destination:
-                        TextView()
-                        .navigationBarTitle(Text("TextView"))
-                    ) {
-                    Text("Go To TextView").foregroundColor(.black)
-                    }
-                
-                NavigationLink(destination:
-                        OverlayView()
-                        .navigationBarTitle(Text("Overlay View"))
-                    ) {
-                    Text("Go To Overlay View").foregroundColor(.black)
-                    }
-                NavigationLink(destination:
-                        CardDemoView()
-                        .navigationBarTitle(Text("Card View"))
-                    ) {
-                    Text("Go To Card View").foregroundColor(.black)
-                    }
-                NavigationLink(destination:
-                        OtherViews()
-                        .navigationBarTitle(Text("Other Views"))
-                    ) {
-                    Text("Go To OtherViews").foregroundColor(.black)
-                    }
-                NavigationLink(destination:
-                        Animations()
-                        .navigationBarTitle(Text("Animation"))
-                    ) {
-                    Text("Go To Animation").foregroundColor(.black)
-                    }
-                NavigationLink(destination:
-                        BarChartView()
-                        .navigationBarTitle(Text("BarChart"))
-                    ) {
-                    Text("Go To BarChart").foregroundColor(.black)
-                    }
-               
+                ForEach(views, id: \.1) { viewData in
+                    CellView(navView: viewData.0, navText: viewData.1)
+                }
             }
         }.ignoresSafeArea()
     }
@@ -76,3 +45,16 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+
+struct CellView: View {
+    var navView: AnyView
+    var navText: String
+    var body: some View {
+        NavigationLink(destination:
+                        navView
+            .navigationBarTitle(Text(navText))
+        ) {
+            Text("Go To \(navText)").foregroundColor(.black)
+        }.navigationTitle("Demo Components")
+    }
+}

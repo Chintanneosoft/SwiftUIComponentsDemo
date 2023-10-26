@@ -9,16 +9,19 @@ import SwiftUI
 
 struct TextView: View {
     var body: some View {
-        Text("Hello, World!, Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!Hello, World!")
-//            .font(.title)
-            .fontWeight(.bold)
-            .underline()
-            .italic()
-//            .strikethrough()
-            .font(.system(size: 24,design: .serif))
-            .baselineOffset(-20)
-            .multilineTextAlignment(.leading)
-            .foregroundColor(.blue)
+        VStack{
+            Text("Hello, World!")
+                .font(.title)
+            Text("Mai bola Hello Duniya Valo Kaise ho Duniya valo!")
+                .fontWeight(.bold)
+                .underline()
+                .italic()
+            //            .strikethrough()
+                .font(.system(size: 24,design: .serif))
+                .baselineOffset(-20)
+                .multilineTextAlignment(.leading)
+                .foregroundColor(.blue)
+        }
     }
 }
 
