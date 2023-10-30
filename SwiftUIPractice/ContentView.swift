@@ -12,8 +12,6 @@ enum Flavor: String, CaseIterable, Identifiable {
     var id: Self { self }
 }
 
-
-
 struct ContentView: View {
     
     var views: [(AnyView, String)] = [
@@ -24,7 +22,9 @@ struct ContentView: View {
         (AnyView(Animations()), "Animations"),
         (AnyView(BarChartView()), "BarChartView"),
         (AnyView(PieChartView()), "PieChartView"),
-        (AnyView(UIKitInSwiftUI()), "UIKitInSwiftUI")
+        (AnyView(UIKitInSwiftUI()), "UIKitInSwiftUI"),
+        (AnyView(StateView(text: "")), "State Binding"),
+        (AnyView(PublishedView()), "Published ObservedObject")
     ]
     
     var body: some View {

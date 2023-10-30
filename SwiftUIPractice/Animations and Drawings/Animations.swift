@@ -36,7 +36,8 @@ struct Animations: View {
                     self.isAnimating.toggle()
                 }
             }
-            .animation(.easeInOut(duration: 1.0))
+            .animation(.easeInOut(duration: 1))
+//            .animation(.easeIn(duration: 1.0),value: scaleEffect(2.0))
             
             if isAnimating{
                 Circle()
