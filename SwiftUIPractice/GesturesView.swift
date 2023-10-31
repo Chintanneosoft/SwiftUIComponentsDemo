@@ -18,6 +18,8 @@ struct GesturesView: View {
     @State private var offset = CGSize.zero
     @State private var isDragging = false
     
+    @State private var location: CGPoint = .zero
+    
     var body: some View {
         
         let dragGesture = DragGesture()
@@ -122,11 +124,21 @@ struct GesturesView: View {
             )
             
             Circle()
-                .fill(.blue)
+                .fill(.red)
                 .frame(width: 100,height: 100)
                 .scaleEffect(isDragging ? 1.5 : 1)
                 .offset(offset)
                 .gesture(combined)
+            
+            Circle()
+                .fill(self.location.y > 50 ? Color.yellow : Color.green)
+                .frame(width: 100, height: 100, alignment: .center)
+                .gesture(
+                    SpatialTapGesture()
+                    .onEnded { event in
+                        self.location = event.location
+                     })
+            
         }
     }
 }
