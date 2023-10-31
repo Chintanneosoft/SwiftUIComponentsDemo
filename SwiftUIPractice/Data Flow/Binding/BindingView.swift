@@ -33,8 +33,4 @@ struct BindingView: View {
     }
 }
 
-//struct BindingView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BindingView(text: )
-//    }
-//}
+

@@ -24,7 +24,8 @@ struct ContentView: View {
         (AnyView(PieChartView()), "PieChartView"),
         (AnyView(UIKitInSwiftUI()), "UIKitInSwiftUI"),
         (AnyView(StateView(text: "")), "State Binding"),
-        (AnyView(PublishedView()), "Published ObservedObject")
+        (AnyView(PublishedView()), "Published ObservedObject"),
+        (AnyView(GesturesView()), "Gestures View")
     ]
     
     var body: some View {

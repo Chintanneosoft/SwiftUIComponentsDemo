@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		927AEB8B2AF0DFCD00E6A003 /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927AEB8A2AF0DFCD00E6A003 /* GesturesView.swift */; };
 		92845E3A2AEA37B900CD2E27 /* UIKitInSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92845E392AEA37B900CD2E27 /* UIKitInSwiftUI.swift */; };
 		92845E452AEA640400CD2E27 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92845E432AEA640400CD2E27 /* DemoViewController.swift */; };
 		92845E462AEA640400CD2E27 /* DemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92845E442AEA640400CD2E27 /* DemoViewController.xib */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		927AEB8A2AF0DFCD00E6A003 /* GesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesView.swift; sourceTree = "<group>"; };
 		92845E392AEA37B900CD2E27 /* UIKitInSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitInSwiftUI.swift; sourceTree = "<group>"; };
 		92845E432AEA640400CD2E27 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		92845E442AEA640400CD2E27 /* DemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoViewController.xib; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				928739E72AEF8A5D00EAD528 /* Data Flow */,
 				92871E182AE8D95200FAFBC7 /* OtherViews.swift */,
 				928CB39B2AE65A820058D280 /* OverlayView.swift */,
+				927AEB8A2AF0DFCD00E6A003 /* GesturesView.swift */,
 				928CB39D2AE674230058D280 /* CardDemoView.swift */,
 				9284D3B52AE25CAE00D5173D /* FormView.swift */,
 				9284D3B72AE26B3500D5173D /* TextView.swift */,
@@ -229,6 +232,7 @@
 				9284D3B82AE26B3500D5173D /* TextView.swift in Sources */,
 				92845E452AEA640400CD2E27 /* DemoViewController.swift in Sources */,
 				928739F32AEF95B500EAD528 /* PublishedView.swift in Sources */,
+				927AEB8B2AF0DFCD00E6A003 /* GesturesView.swift in Sources */,
 				928CB39E2AE674230058D280 /* CardDemoView.swift in Sources */,
 				929DBE712AE14D76001CC24A /* ContentView.swift in Sources */,
 				928739F52AEF96D900EAD528 /* AnotherView.swift in Sources */,

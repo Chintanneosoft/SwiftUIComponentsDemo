@@ -10,6 +10,7 @@ import SwiftUI
 struct Animations: View {
     
     @State private var isAnimating = false
+    @State private var scale: CGFloat = 1.0
     
     var body: some View {
         VStack{
@@ -18,9 +19,9 @@ struct Animations: View {
                 .foregroundColor(Color.pink)
                 .animation(.easeInOut(duration: 1.0))
                 .onTapGesture {
-                    withAnimation {
+//                    withAnimation {
                         self.isAnimating.toggle()
-                    }
+//                    }
                 }
             
             Path { path in
@@ -31,10 +32,12 @@ struct Animations: View {
             }
             .stroke(Color.cyan, lineWidth: 3)
             .rotationEffect(Angle(degrees: isAnimating ? 180 : 0))
+//            .scaleEffect(scale)
             .onTapGesture {
-                withAnimation {
+//                withAnimation {
                     self.isAnimating.toggle()
-                }
+//                    self.scale = isAnimating ? 2.0 : 1.0
+//                }
             }
             .animation(.easeInOut(duration: 1))
 //            .animation(.easeIn(duration: 1.0),value: scaleEffect(2.0))
@@ -46,9 +49,9 @@ struct Animations: View {
                     .frame(width: 100, height: 100)
                     .animation(.easeInOut(duration: 1))
                     .onTapGesture {
-                        withAnimation {
+//                        withAnimation {
                             self.isAnimating.toggle()
-                        }
+//                        }
                     }.transition(.opacity)
             }
             
@@ -71,9 +74,9 @@ struct Animations: View {
                 .opacity(0.6)
                 .rotationEffect(Angle(degrees: isAnimating ? 0 : 270))
                 .onTapGesture {
-                    withAnimation {
+//                    withAnimation {
                         self.isAnimating.toggle()
-                    }
+//                    }
                 }
                 .animation(.easeOut(duration: 1.0))
                 
@@ -88,9 +91,9 @@ struct Animations: View {
                 .opacity(0.6)
                 .rotationEffect(Angle(degrees: isAnimating ? 180 : 0))
                 .onTapGesture {
-                    withAnimation {
+//                    withAnimation {
                         self.isAnimating.toggle()
-                    }
+//                    }
                 }
                 .animation(.easeOut(duration: 1.0))
                 
@@ -102,9 +105,9 @@ struct Animations: View {
                 .offset(CGSize(width: 0, height: isAnimating ? 0 : -400))
                 .animation(.easeInOut(duration: 1))
                 .onTapGesture {
-                    withAnimation {
+//                    withAnimation {
                         self.isAnimating.toggle()
-                    }
+//                    }
                 }
             
         }
