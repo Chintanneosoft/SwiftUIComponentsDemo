@@ -20,6 +20,8 @@ struct GesturesView: View {
     
     @State private var location: CGPoint = .zero
     
+    @State private var circleColor: Color = .cyan
+    
     var body: some View {
         
         let dragGesture = DragGesture()
@@ -75,8 +77,8 @@ struct GesturesView: View {
                 .gesture(
                     MagnificationGesture()
                         .onChanged({ amount in
-                        scaleCurrentAmount = amount - 1
-                    })
+                            scaleCurrentAmount = amount - 1 
+                        })
                         .onEnded({ amount in
                             scaleFinaleAmount += scaleCurrentAmount
                             scaleCurrentAmount = 0
@@ -106,8 +108,8 @@ struct GesturesView: View {
             }.highPriorityGesture(
                 TapGesture()
                     .onEnded{
-                    print("Vstack Tapped")
-                }
+                        print("Vstack Tapped")
+                    }
             )
             
             VStack{
@@ -119,26 +121,52 @@ struct GesturesView: View {
             }.simultaneousGesture(
                 TapGesture()
                     .onEnded{
-                    print("Vstack Tapped")
-                }
+                        print("Vstack Tapped")
+                    }
             )
             
-            Circle()
-                .fill(.red)
-                .frame(width: 100,height: 100)
-                .scaleEffect(isDragging ? 1.5 : 1)
-                .offset(offset)
-                .gesture(combined)
-            
-            Circle()
-                .fill(self.location.y > 50 ? Color.yellow : Color.green)
-                .frame(width: 100, height: 100, alignment: .center)
-                .gesture(
-                    SpatialTapGesture()
-                    .onEnded { event in
-                        self.location = event.location
-                     })
-            
+            HStack{
+                Circle()
+                    .fill(.red)
+                //                .frame(width: 100,height: 100)
+                    .scaleEffect(isDragging ? 1.5 : 1)
+                    .offset(offset)
+                    .gesture(combined)
+                
+                Circle()
+                    .fill(self.location.y > 50 ? Color.yellow : Color.green)
+                //                .frame(width: 100, height: 100, alignment: .center)
+                    .gesture(
+                        SpatialTapGesture()
+                            .onEnded { event in
+                                self.location = event.location
+                            })
+                
+                Circle()
+                    .fill(circleColor)
+                    .gesture(
+                        DragGesture(minimumDistance: 5, coordinateSpace: .local)
+                            .onEnded({ value in
+                                if value.translation.width < 0 {
+                                    // left
+                                    circleColor = .blue
+                                }
+                                
+                                if value.translation.width > 0 {
+                                    // right
+                                    circleColor = .mint
+                                }
+                                if value.translation.height < 0 {
+                                    // up
+                                    circleColor = .yellow
+                                }
+                                
+                                if value.translation.height > 0 {
+                                    // down
+                                    circleColor = .pink
+                                }
+                            }))
+            }
         }
     }
 }
