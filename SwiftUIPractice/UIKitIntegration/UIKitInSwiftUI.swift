@@ -8,27 +8,42 @@
 import SwiftUI
 import PhotosUI
 
+//MARK: - UIViewControllerRepresentable
+//All the ViewController
+struct DemoVC: UIViewControllerRepresentable{
+    func makeUIViewController(context: Context) -> UIViewController {
+        let viewController = DemoViewController()
+        return viewController
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        uiViewController.view.backgroundColor = .lightGray
+    }
+    
+    typealias UIViewControllerType = UIViewController
+}
+
 struct ImagePicker: UIViewControllerRepresentable{
     @Binding var image: UIImage?
     
-    
+    //Coordinator that is bridge between SwiftUIView and UIviewController or UIview
     class Coordinator: NSObject, PHPickerViewControllerDelegate{
-            var parent: ImagePicker
-            init(_ parent: ImagePicker) {
-                self.parent = parent
-            }
-            func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-                picker.dismiss(animated: true)
-                
-                guard let provider = results.first?.itemProvider else {return}
-                if provider.canLoadObject(ofClass: UIImage.self){
-                    provider.loadObject(ofClass: UIImage.self) { img,_ in
-                        self.parent.image = img as? UIImage
-                    }
+        var parent: ImagePicker
+        init(_ parent: ImagePicker) {
+            self.parent = parent
+        }
+        func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+            picker.dismiss(animated: true)
+            
+            guard let provider = results.first?.itemProvider else {return}
+            if provider.canLoadObject(ofClass: UIImage.self){
+                provider.loadObject(ofClass: UIImage.self) { img,_ in
+                    self.parent.image = img as? UIImage
                 }
             }
         }
-
+    }
+    
     func makeUIViewController(context: Context) -> PHPickerViewController {
         var config = PHPickerConfiguration()
         config.filter = .images
@@ -55,13 +70,14 @@ struct UIKitInSwiftUI: View {
     @State var showingPicker = false
     var body: some View {
         VStack{
-                img?
-                    .resizable()
-                    .scaledToFit()
-                Button("Select Image") {
-                    showingPicker = true
-                }
-            RedViewController()
+            img?
+                .resizable()
+//                .scaledToFit()
+//                .scaledToFill()
+                .aspectRatio(contentMode: .fill)
+            Button("Select Image") {
+                showingPicker = true
+            }
             DemoVC()
             
         }
@@ -74,35 +90,9 @@ struct UIKitInSwiftUI: View {
     }
 }
 
+
 struct UIKitInSwiftUI_Previews: PreviewProvider {
     static var previews: some View {
         UIKitInSwiftUI()
     }
-}
-
-struct RedViewController: UIViewControllerRepresentable{
-    func makeUIViewController(context: Context) -> UIViewController {
-        let viewController = UIViewController()
-        return viewController
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        uiViewController.view.backgroundColor = .red
-        
-    }
-
-    typealias UIViewControllerType = UIViewController
-}
-
-struct DemoVC: UIViewControllerRepresentable{
-    func makeUIViewController(context: Context) -> UIViewController {
-        let viewController = DemoViewController()
-        return viewController
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        uiViewController.view.backgroundColor = .blue
-    }
-
-    typealias UIViewControllerType = UIViewController
 }

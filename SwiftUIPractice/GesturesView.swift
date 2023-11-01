@@ -77,7 +77,7 @@ struct GesturesView: View {
                 .gesture(
                     MagnificationGesture()
                         .onChanged({ amount in
-                            scaleCurrentAmount = amount - 1 
+                            scaleCurrentAmount = amount - 1
                         })
                         .onEnded({ amount in
                             scaleFinaleAmount += scaleCurrentAmount

@@ -17,9 +17,12 @@ class DemoViewController: UIViewController {
 
     @IBAction func btnTapped(_ sender: UIButton) {
        
-        let swiftUIView: some View = TextView()
+        let swiftUIView: some View = ReusableView()
         let hostingController = UIHostingController(rootView: swiftUIView)
-        present(hostingController, animated: true, completion: nil)
+//        present(hostingController, animated: true, completion: nil)
+        hostingController.view.center = view.center
+        view.addSubview(hostingController.view)
+        
     }
     
     /*

@@ -25,7 +25,8 @@ struct ContentView: View {
         (AnyView(UIKitInSwiftUI()), "UIKitInSwiftUI"),
         (AnyView(StateView(text: "")), "State Binding"),
         (AnyView(PublishedView()), "Published ObservedObject"),
-        (AnyView(GesturesView()), "Gestures View")
+        (AnyView(GesturesView()), "Gestures View"),
+        (AnyView(ReusableView()), "Reusable View")
     ]
     
     var body: some View {

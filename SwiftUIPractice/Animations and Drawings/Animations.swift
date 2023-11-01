@@ -14,7 +14,7 @@ struct Animations: View {
     
     var body: some View {
         VStack{
-            RoundedRectangle(cornerRadius: isAnimating ? 25 : 5)
+            RoundedRectangle(cornerRadius: isAnimating ? 50 : 5)
                 .frame(width: 100, height: 100)
                 .foregroundColor(Color.pink)
                 .animation(.easeInOut(duration: 1.0))
@@ -31,16 +31,16 @@ struct Animations: View {
                 path.addLine(to: CGPoint(x: 20, y: 20))
             }
             .stroke(Color.cyan, lineWidth: 3)
-            .rotationEffect(Angle(degrees: isAnimating ? 180 : 0))
-//            .scaleEffect(scale)
+            .rotationEffect(Angle(degrees: isAnimating ? 200 : 0))
+            .scaleEffect(scale)
             .onTapGesture {
 //                withAnimation {
                     self.isAnimating.toggle()
-//                    self.scale = isAnimating ? 2.0 : 1.0
+                self.scale = isAnimating ? 1.5 : 1.0
 //                }
             }
             .animation(.easeInOut(duration: 1))
-//            .animation(.easeIn(duration: 1.0),value: scaleEffect(2.0))
+//            .animation(.easeIn(duration: 5.0),value: scale)
             
             if isAnimating{
                 Circle()
