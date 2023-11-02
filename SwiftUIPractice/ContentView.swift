@@ -27,7 +27,8 @@ struct ContentView: View {
         (AnyView(PublishedView()), "Published ObservedObject"),
         (AnyView(GesturesView()), "Gestures View"),
         (AnyView(ReusableView()), "Reusable View"),
-        (AnyView(Navigation()), "Navigation View")
+        (AnyView(Navigation()), "Navigation View"),
+        (AnyView(GridLayoutView()), "GridLayout View")
     ]
     
     var body: some View {

@@ -25,6 +25,7 @@
 		928CB39E2AE674230058D280 /* CardDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928CB39D2AE674230058D280 /* CardDemoView.swift */; };
 		9293A29C2AF224A900158A80 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293A29B2AF224A900158A80 /* ReusableView.swift */; };
 		9293CCAE2AF36E250070D13D /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293CCAD2AF36E250070D13D /* Navigation.swift */; };
+		9293CCB02AF3BBFB0070D13D /* GridLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293CCAF2AF3BBFB0070D13D /* GridLayoutView.swift */; };
 		929DBE6F2AE14D76001CC24A /* SwiftUIPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929DBE6E2AE14D76001CC24A /* SwiftUIPracticeApp.swift */; };
 		929DBE712AE14D76001CC24A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929DBE702AE14D76001CC24A /* ContentView.swift */; };
 		929DBE732AE14D7B001CC24A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929DBE722AE14D7B001CC24A /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		928CB39D2AE674230058D280 /* CardDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDemoView.swift; sourceTree = "<group>"; };
 		9293A29B2AF224A900158A80 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		9293CCAD2AF36E250070D13D /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		9293CCAF2AF3BBFB0070D13D /* GridLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutView.swift; sourceTree = "<group>"; };
 		929DBE6B2AE14D76001CC24A /* SwiftUIPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929DBE6E2AE14D76001CC24A /* SwiftUIPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPracticeApp.swift; sourceTree = "<group>"; };
 		929DBE702AE14D76001CC24A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				9293A29B2AF224A900158A80 /* ReusableView.swift */,
 				92871E182AE8D95200FAFBC7 /* OtherViews.swift */,
 				9293CCAD2AF36E250070D13D /* Navigation.swift */,
+				9293CCAF2AF3BBFB0070D13D /* GridLayoutView.swift */,
 				929DBE722AE14D7B001CC24A /* Assets.xcassets */,
 				929DBE742AE14D7B001CC24A /* Preview Content */,
 			);
@@ -238,6 +241,7 @@
 				9284D3B82AE26B3500D5173D /* TextView.swift in Sources */,
 				92845E452AEA640400CD2E27 /* DemoViewController.swift in Sources */,
 				928739F32AEF95B500EAD528 /* PublishedView.swift in Sources */,
+				9293CCB02AF3BBFB0070D13D /* GridLayoutView.swift in Sources */,
 				927AEB8B2AF0DFCD00E6A003 /* GesturesView.swift in Sources */,
 				928CB39E2AE674230058D280 /* CardDemoView.swift in Sources */,
 				929DBE712AE14D76001CC24A /* ContentView.swift in Sources */,

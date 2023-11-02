@@ -47,11 +47,11 @@ struct Navigation: View {
                     }
                     
                     NavigationLink {
-                        VStack{
+                        VStack(alignment: .leading){
                             Text("Set 1000000000")
                                 .padding()
                                 .onTapGesture {
-                                    score += 1000000000
+                                    score = 1000000000
                                     isPresented.toggle()
                                 }
                                 .sheet(isPresented: $isPresented) {
@@ -61,8 +61,8 @@ struct Navigation: View {
                     } label: {
                         Text("Set Page")
                             .padding()
-                    }.navigationBarHidden(false)
-                    
+                    }
+                    .navigationBarHidden(false)
                 }
                 .statusBar(hidden: true)
             }
