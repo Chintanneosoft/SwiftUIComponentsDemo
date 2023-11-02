@@ -26,7 +26,8 @@ struct ContentView: View {
         (AnyView(StateView(text: "")), "State Binding"),
         (AnyView(PublishedView()), "Published ObservedObject"),
         (AnyView(GesturesView()), "Gestures View"),
-        (AnyView(ReusableView()), "Reusable View")
+        (AnyView(ReusableView()), "Reusable View"),
+        (AnyView(Navigation()), "Navigation View")
     ]
     
     var body: some View {

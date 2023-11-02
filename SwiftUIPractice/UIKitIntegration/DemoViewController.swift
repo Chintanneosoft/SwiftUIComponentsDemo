@@ -12,7 +12,6 @@ class DemoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     @IBAction func btnTapped(_ sender: UIButton) {
