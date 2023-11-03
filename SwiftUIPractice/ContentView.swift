@@ -28,7 +28,9 @@ struct ContentView: View {
         (AnyView(GesturesView()), "Gestures View"),
         (AnyView(ReusableView()), "Reusable View"),
         (AnyView(Navigation()), "Navigation View"),
-        (AnyView(GridLayoutView()), "GridLayout View")
+        (AnyView(GridLayoutView()), "GridLayout View"),
+        (AnyView(ListView()), "List View")
+        
     ]
     
     var body: some View {
