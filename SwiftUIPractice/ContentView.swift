@@ -30,8 +30,8 @@ struct ContentView: View {
         (AnyView(Navigation()), "Navigation View"),
         (AnyView(GridLayoutView()), "GridLayout View"),
         (AnyView(ListView()), "List View"),
-        (AnyView(NetflixCopy()), "Netflix Demo View")
-        
+        (AnyView(NetflixCopy()), "Netflix Demo View"),
+        (AnyView(LensKart()), "LensKart Demo View")
     ]
     
     var body: some View {
