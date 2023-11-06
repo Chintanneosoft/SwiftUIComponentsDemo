@@ -29,7 +29,8 @@ struct ContentView: View {
         (AnyView(ReusableView()), "Reusable View"),
         (AnyView(Navigation()), "Navigation View"),
         (AnyView(GridLayoutView()), "GridLayout View"),
-        (AnyView(ListView()), "List View")
+        (AnyView(ListView()), "List View"),
+        (AnyView(NetflixCopy()), "Netflix Demo View")
         
     ]
     

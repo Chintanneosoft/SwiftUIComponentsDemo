@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921D0CA72AF522C10034CE43 /* NetflixCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D0CA62AF522C10034CE43 /* NetflixCopy.swift */; };
 		927AEB8B2AF0DFCD00E6A003 /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927AEB8A2AF0DFCD00E6A003 /* GesturesView.swift */; };
 		92845E3A2AEA37B900CD2E27 /* UIKitInSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92845E392AEA37B900CD2E27 /* UIKitInSwiftUI.swift */; };
 		92845E452AEA640400CD2E27 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92845E432AEA640400CD2E27 /* DemoViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		921D0CA62AF522C10034CE43 /* NetflixCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixCopy.swift; sourceTree = "<group>"; };
 		927AEB8A2AF0DFCD00E6A003 /* GesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesView.swift; sourceTree = "<group>"; };
 		92845E392AEA37B900CD2E27 /* UIKitInSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitInSwiftUI.swift; sourceTree = "<group>"; };
 		92845E432AEA640400CD2E27 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				9293CCAD2AF36E250070D13D /* Navigation.swift */,
 				9293CCAF2AF3BBFB0070D13D /* GridLayoutView.swift */,
 				92871FCD2AF4BC2C0040D407 /* ListView.swift */,
+				921D0CA62AF522C10034CE43 /* NetflixCopy.swift */,
 				929DBE722AE14D7B001CC24A /* Assets.xcassets */,
 				929DBE742AE14D7B001CC24A /* Preview Content */,
 			);
@@ -241,6 +244,7 @@
 				9284D3B62AE25CAE00D5173D /* FormView.swift in Sources */,
 				92871E192AE8D95200FAFBC7 /* OtherViews.swift in Sources */,
 				928739F12AEF92CD00EAD528 /* BindingView.swift in Sources */,
+				921D0CA72AF522C10034CE43 /* NetflixCopy.swift in Sources */,
 				9284D3B82AE26B3500D5173D /* TextView.swift in Sources */,
 				92845E452AEA640400CD2E27 /* DemoViewController.swift in Sources */,
 				928739F32AEF95B500EAD528 /* PublishedView.swift in Sources */,

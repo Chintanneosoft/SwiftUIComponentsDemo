@@ -91,7 +91,7 @@ struct TaskFormView: View {
                     TextField("Task Title", text: $newTaskTitle)
                 }
                 HStack{
-                    DatePicker("Select Due Date:", selection: $newTaskDueDate, displayedComponents: .date)
+                    DatePicker("Due Date:", selection: $newTaskDueDate, displayedComponents: .date)
                 }
             }.padding()
             
@@ -121,17 +121,16 @@ struct TaskEditView: View {
                     HStack{
                         Text("Task Title:")
                         Spacer()
+                            .frame(width: .infinity)
                         TextField("Task Title", text: $tasks[task].title)
                     }
                     
                     HStack{
-                        DatePicker("Select Due Date:", selection: $tasks[task].dueDate, displayedComponents: .date)
+                        DatePicker("Due Date:", selection: $tasks[task].dueDate, displayedComponents: .date)
                     }
                 }.padding()
                 
                 Button(action: {
-//                    tasks.append(Task(title: taskTitle, dueDate: taskDueDate, isCompleted: false))
-//                    tasks[task.id] = Task(title: task.title, dueDate: task.dueDate, isCompleted: false)=
                     tasks[task].isEditing.toggle()
                     print(tasks)
             
