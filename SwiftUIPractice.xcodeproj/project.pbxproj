@@ -29,6 +29,9 @@
 		9293A29C2AF224A900158A80 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293A29B2AF224A900158A80 /* ReusableView.swift */; };
 		9293CCAE2AF36E250070D13D /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293CCAD2AF36E250070D13D /* Navigation.swift */; };
 		9293CCB02AF3BBFB0070D13D /* GridLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293CCAF2AF3BBFB0070D13D /* GridLayoutView.swift */; };
+		9295DEC02AFA0A15002F6ECA /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295DEBF2AFA0A15002F6ECA /* TabButton.swift */; };
+		9295DEC22AFA0A59002F6ECA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295DEC12AFA0A59002F6ECA /* CardView.swift */; };
+		9295DEC42AFA0A96002F6ECA /* SpecsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295DEC32AFA0A96002F6ECA /* SpecsData.swift */; };
 		929DBE6F2AE14D76001CC24A /* SwiftUIPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929DBE6E2AE14D76001CC24A /* SwiftUIPracticeApp.swift */; };
 		929DBE712AE14D76001CC24A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929DBE702AE14D76001CC24A /* ContentView.swift */; };
 		929DBE732AE14D7B001CC24A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929DBE722AE14D7B001CC24A /* Assets.xcassets */; };
@@ -58,6 +61,9 @@
 		9293A29B2AF224A900158A80 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		9293CCAD2AF36E250070D13D /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		9293CCAF2AF3BBFB0070D13D /* GridLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutView.swift; sourceTree = "<group>"; };
+		9295DEBF2AFA0A15002F6ECA /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		9295DEC12AFA0A59002F6ECA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		9295DEC32AFA0A96002F6ECA /* SpecsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecsData.swift; sourceTree = "<group>"; };
 		929DBE6B2AE14D76001CC24A /* SwiftUIPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		929DBE6E2AE14D76001CC24A /* SwiftUIPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPracticeApp.swift; sourceTree = "<group>"; };
 		929DBE702AE14D76001CC24A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +129,17 @@
 			path = Publisher;
 			sourceTree = "<group>";
 		};
+		9295DEBE2AFA09FA002F6ECA /* LensKart */ = {
+			isa = PBXGroup;
+			children = (
+				929356A22AF902B20028EB6C /* LensKart.swift */,
+				9295DEBF2AFA0A15002F6ECA /* TabButton.swift */,
+				9295DEC12AFA0A59002F6ECA /* CardView.swift */,
+				9295DEC32AFA0A96002F6ECA /* SpecsData.swift */,
+			);
+			path = LensKart;
+			sourceTree = "<group>";
+		};
 		929DBE622AE14D76001CC24A = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +161,7 @@
 			children = (
 				929DBE6E2AE14D76001CC24A /* SwiftUIPracticeApp.swift */,
 				929DBE702AE14D76001CC24A /* ContentView.swift */,
+				9295DEBE2AFA09FA002F6ECA /* LensKart */,
 				92845E3B2AEA631900CD2E27 /* UIKitIntegration */,
 				92845E492AEA66B900CD2E27 /* Animations and Drawings */,
 				928739E72AEF8A5D00EAD528 /* Data Flow */,
@@ -158,7 +176,6 @@
 				9293CCAF2AF3BBFB0070D13D /* GridLayoutView.swift */,
 				92871FCD2AF4BC2C0040D407 /* ListView.swift */,
 				921D0CA62AF522C10034CE43 /* NetflixCopy.swift */,
-				929356A22AF902B20028EB6C /* LensKart.swift */,
 				929DBE722AE14D7B001CC24A /* Assets.xcassets */,
 				929DBE742AE14D7B001CC24A /* Preview Content */,
 			);
@@ -252,11 +269,14 @@
 				9284D3B82AE26B3500D5173D /* TextView.swift in Sources */,
 				92845E452AEA640400CD2E27 /* DemoViewController.swift in Sources */,
 				928739F32AEF95B500EAD528 /* PublishedView.swift in Sources */,
+				9295DEC42AFA0A96002F6ECA /* SpecsData.swift in Sources */,
 				9293CCB02AF3BBFB0070D13D /* GridLayoutView.swift in Sources */,
 				927AEB8B2AF0DFCD00E6A003 /* GesturesView.swift in Sources */,
 				928CB39E2AE674230058D280 /* CardDemoView.swift in Sources */,
 				929DBE712AE14D76001CC24A /* ContentView.swift in Sources */,
 				9293CCAE2AF36E250070D13D /* Navigation.swift in Sources */,
+				9295DEC02AFA0A15002F6ECA /* TabButton.swift in Sources */,
+				9295DEC22AFA0A59002F6ECA /* CardView.swift in Sources */,
 				9293A29C2AF224A900158A80 /* ReusableView.swift in Sources */,
 				928739F52AEF96D900EAD528 /* AnotherView.swift in Sources */,
 				92871E1D2AE8E67A00FAFBC7 /* BarChartView.swift in Sources */,
