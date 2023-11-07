@@ -96,7 +96,7 @@ struct TaskFormView: View {
             }.padding()
             
             Button(action: {
-                tasks.append(Task(title: newTaskTitle, dueDate: newTaskDueDate, isCompleted: false,isEditing: false))
+                tasks.append(Task(title: newTaskTitle, dueDate: newTaskDueDate, isCompleted: false, isEditing: false))
                 newTaskTitle = ""
             }) {
                 Text("Add Task")

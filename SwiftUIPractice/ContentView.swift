@@ -17,7 +17,6 @@ struct ContentView: View {
     var views: [(AnyView, String)] = [
         (AnyView(TextView()), "TextView"),
         (AnyView(OverlayView()), "OverlayView"),
-        (AnyView(CardDemoView()), "CardDemoView"),
         (AnyView(OtherViews()), "OtherViews"),
         (AnyView(Animations()), "Animations"),
         (AnyView(BarChartView()), "BarChartView"),
