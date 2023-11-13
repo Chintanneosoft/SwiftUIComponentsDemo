@@ -27,7 +27,7 @@ struct ImagePicker: UIViewControllerRepresentable{
     @Binding var image: UIImage?
     
     //Coordinator that is bridge between SwiftUIView and UIviewController or UIview
-    class Coordinator: NSObject, PHPickerViewControllerDelegate{
+    class Coordinator: PHPickerViewControllerDelegate{
         var parent: ImagePicker
         init(_ parent: ImagePicker) {
             self.parent = parent
